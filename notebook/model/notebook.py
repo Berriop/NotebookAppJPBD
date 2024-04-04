@@ -45,7 +45,7 @@ class Notebook:
         return [note for note in self.notes if note.importance == "HIGH" or note.importance == "MEDIUM"]
 
     def tags_note_count(self) -> dict[str, int]:
-        tag_count = {}
-        for tag in self.tags:
-            tag_count[tag] = tag_count.get(tag, 0) + 1
-        return tag_count
+        note_count = dict()
+        for note in self.tags:
+            note_count[note] = note_count.get(note, 0) + 1
+        return note_count
